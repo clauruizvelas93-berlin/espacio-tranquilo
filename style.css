@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fdfdff; /* Blanco con un toque de lila */
+    color: #4b384b; /* Lila oscuro */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden; /* Para que la imagen de fondo no genere scroll */
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 4em;
+    margin: 0;
+    font-weight: 600;
+    color: white;
+}
+
+.subtitle-heading {
+    font-size: 0.5em; /* Más pequeño que el h1 */
+    display: block; /* Para que ocupe su propia línea */
+    margin-top: 10px;
+}
+
+p {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: white;
+}
+
+#slideshow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#slideshow-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#slideshow-container img.active {
+    opacity: 1;
+}
+
+#play-pause-btn {
+    background-color: #d8bfd8; /* Tono lila */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 50px; /* Botón más redondeado */
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+#play-pause-btn:hover {
+    background-color: #c4a2c4; /* Tono lila más oscuro */
+}
+
+#play-pause-btn.playing {
+    animation: pulse 2s infinite;
+}
+
+.affirmation-text {
+    font-size: 1.2em;
+    color: white;
+    margin-top: 30px;
+    max-width: 80%;
+    line-height: 1.6;
+    font-weight: 300; /* Para una letra no muy gruesa */
+    font-style: italic; /* Toda la frase en itálica */
+}
+
+.affirmation-text strong {
+    font-weight: 600; /* Para el texto en negrilla */
+}
+
+.celebrate-text {
+    font-size: 0.8em; /* Más pequeño */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
